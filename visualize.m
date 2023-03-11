@@ -19,7 +19,7 @@ grid minor  % Adding grid lines
 
 
 for i = 1:1:length(data)
-    if rem(i,58) == 0
+    if rem(i,8) == 0
         y = data(1,1:end,i);
         p.YData = y;
         drawnow;
