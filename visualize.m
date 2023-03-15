@@ -1,5 +1,6 @@
 
 data = load("donneescordes.mat");
+
 data = data.ans.Data;
 x_0 = linspace(0,Longueur,n);
 y_0 = x_0;
@@ -17,10 +18,10 @@ grid minor  % Adding grid lines
 
 
 
-
 for i = 1:1:length(data)
-    if rem(i,8) == 0
+    if rem(i,150) == 0
         y = data(1,1:end,i);
+        time = 0;
         p.YData = y;
         drawnow;
     end
