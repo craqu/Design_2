@@ -1,6 +1,15 @@
 
 data = load("donneescordes.mat");
+specs = load("specs.mat");
+freq = load("freq_read.mat");
+freq = freq.freq(2,:);
+specs = specs.specs;
+Temps = specs(2,:);
+Tension = specs(3,:);
 
+
+
+f_1 = specs(4,:);
 data = data.ans.Data;
 x_0 = linspace(0,Longueur,n);
 y_0 = x_0;
@@ -23,6 +32,7 @@ for i = 1:1:length(data)
         y = data(1,1:end,i);
         time = 0;
         p.YData = y;
+        title(sprintf('Temps: %0.2f | Tension: %0.2f | Freq cons (1er harmo): %0.2f | Freq (2iem harmo): %0.2f',Temps(i),Tension(i),f_1(i),freq(i)));
         drawnow;
     end
 end
