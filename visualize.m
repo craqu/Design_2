@@ -32,7 +32,7 @@ for i = 1:1:length(data)
         y = data(1,1:end,i);
         time = 0;
         p.YData = y;
-        title(sprintf('Temps: %0.2f | Tension: %0.2f | Freq cons (1er harmo): %0.2f | Freq (2iem harmo): %0.2f',Temps(i),Tension(i),f_1(i),freq(i)));
+        title(sprintf('Temps: %0.2f | Tension: %0.2f | Freq cons (1er harmo): %0.2f | Freq corde: %0.2f',Temps(i),Tension(i),f_1(i),freq(i)));
         drawnow;
     end
 end
