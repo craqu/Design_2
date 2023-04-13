@@ -1,1 +1,3 @@
-# Design_2
+ouvrir matlab
+run -> init.m
+
